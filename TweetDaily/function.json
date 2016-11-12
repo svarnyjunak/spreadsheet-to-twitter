@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "name": "morningTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 30 7 * * *"
+    }
+  ],
+  "disabled": false
+}
