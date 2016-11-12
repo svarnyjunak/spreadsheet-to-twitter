@@ -1,0 +1,13 @@
+{
+  "name": "internationaldayof",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.16.6",
+    "tuiter": "^0.2.13"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.0"
+  }
+}
