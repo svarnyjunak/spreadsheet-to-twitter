@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.16.6",
-    "tuiter": "^0.2.13"
+    "tuiter": "^0.2.13",
+    "google-spreadsheet-to-json": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^3.10.0"
