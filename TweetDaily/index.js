@@ -54,5 +54,7 @@ module.exports = (context, myTimer) => {
     .catch(function (err) {
       console.error(err.message);
       console.error(err.stack);
-    });;
+    });
+
+    context.done();
 };
