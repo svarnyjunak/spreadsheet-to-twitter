@@ -42,19 +42,21 @@ module.exports = (context, myTimer) => {
         var randomIndex = Math.floor(Math.random() * currentItems.length);
         var statusText = currentItems[randomIndex].content;
         sendTweet(statusText)
-          .then(() => context.log("Tweet (" + statusText + ") has been sent.", timeStamp))
+          .then(() => {
+            context.log("Tweet (" + statusText + ") has been sent.", timeStamp);
+            context.done();
+          })
           .catch((e) => {
             context.log("Error while sending tweet: ");
             context.log(e);
           });
       } else {
         context.log("No tweet found.", timeStamp);
+        context.done();
       }
     })
     .catch(function (err) {
       console.error(err.message);
       console.error(err.stack);
     });
-
-    context.done();
 };
