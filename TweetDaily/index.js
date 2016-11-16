@@ -48,15 +48,14 @@ module.exports = (context, myTimer) => {
           })
           .catch((e) => {
             context.log("Error while sending tweet: ");
-            context.log(e);
+            context.done(e);
           });
       } else {
         context.log("No tweet found.", timeStamp);
         context.done();
       }
     })
-    .catch(function (err) {
-      console.error(err.message);
-      console.error(err.stack);
+    .catch((err) => {
+      context.done(err);
     });
 };
